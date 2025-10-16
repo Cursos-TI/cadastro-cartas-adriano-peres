@@ -7,6 +7,8 @@ int populacaoCarta1;
 float areaCarta1;
 float pibCarta1;
 int numPontosTuristicosCarta1;
+double densidadePopulacionalCarta1;
+double pibPerCapitaCarta1;
 
 char estadoCarta2;
 char codigoCarta2[4];
@@ -15,6 +17,8 @@ int populacaoCarta2;
 float areaCarta2;
 float pibCarta2;
 int numPontosTuristicosCarta2;
+double densidadePopulacionalCarta2;
+double pibPerCapitaCarta2;
 
 
 int main() {
@@ -48,8 +52,6 @@ int main() {
     printf("7. Número de Pontos Turísticos: ");
     
     scanf("%d", &numPontosTuristicosCarta1);
-
-
     
     
     printf("\n===== CADASTRO DA CARTA 2 =====\n");
@@ -80,10 +82,7 @@ int main() {
 
     
     printf("7. Número de Pontos Turísticos: ");
-    scanf("%d", &numPontosTuristicosCarta2);
-
-
-    
+    scanf("%d", &numPontosTuristicosCarta2);    
     
     printf("\n\n=============== CARTAS CADASTRADAS ==============\n");
 
@@ -92,11 +91,13 @@ int main() {
     printf("Estado: %c\n", estadoCarta1);
     printf("Código: %s\n", codigoCarta1);
     printf("Nome da Cidade: %s\n", nomeCidadeCarta1);
-    printf("População: %d\n", populacaoCarta1);
-    
+    printf("População: %d\n", populacaoCarta1);    
     printf("Área: %.2f km²\n", areaCarta1); 
     printf("PIB: %.2f bilhões de reais\n", pibCarta1);
     printf("Número de Pontos Turísticos: %d\n", numPontosTuristicosCarta1);
+    printf("Densidade Populacional: %.2f hab/km²\n", (double) populacaoCarta1 / areaCarta1);
+    printf("PIB per capita: %.2f reais\n", (double) (pibCarta1 * 1000000000.0) / populacaoCarta1);
+
 
     
     printf("\nCarta 2:\n");
@@ -107,6 +108,8 @@ int main() {
     printf("Área: %.2f km²\n", areaCarta2);
     printf("PIB: %.2f bilhões de reais\n", pibCarta2);
     printf("Número de Pontos Turísticos: %d\n", numPontosTuristicosCarta2);
+    printf("Densidade Populacional: %.2f hab/km²\n", (double) populacaoCarta2 / areaCarta2);
+    printf("PIB per capita: %.2f reais\n", (double) (pibCarta2 * 1000000000.0) / populacaoCarta2);
     
     printf("\n=================================================\n");
 
